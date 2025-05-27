@@ -48,42 +48,49 @@ A powerful, web-based inventory and resource management system built using **Cor
 
 ## 📁 Project Structure
 
-├── php_action/ # PHP logic, queries, and DB connections'
-├── includes/ # Header, footer, and reusable UI parts'
-├── assets/ # CSS, JS, fonts, and libraries'
-echo '├── custom/ # Custom styles and logic'
-echo '├── index.php # Login screen'
-echo '├── dashboard.php # Admin dashboard'
-echo '└── ... # Other modules (product.php, order.php, etc.)'
-echo '```'
-echo ""
-echo "---"
-echo "## 🛠️ Setup Instructions"
-echo ""
-echo "Follow these steps to get the project up and running on your local machine."
-echo ""
-echo "### 1️⃣ Clone the repository"
-echo ""
-echo '```bash'
-echo 'git clone [https://github.com/your-username/php-inventory-management-system.git](https://github.com/your-username/php-inventory-management-system.git)'
-echo '```'
-echo ""
-echo "### 2️⃣ Import the MySQL Database"
-echo ""
-echo "1. Open **phpMyAdmin** or use a MySQL command-line interface."
-echo "2. Create a new database named \`store\`."
-echo "3. Import the provided \`store.sql\` file (located in the root of the cloned repository) into the newly created \`store\` database."
-echo ""
-echo "### 4️⃣ Set File Permissions"
-echo ""
-echo "Ensure your server environment has appropriate file permissions that allow for file uploads and PDF generation, as these features are part of the system."
-echo ""
-echo "---"
-echo "## 🔑 Default Login Credentials"
-echo ""
-echo "After setup, you can log in with the following default credentials:"
-echo ""
-echo "* **Username:** \`admin\`"
-echo "* **Password:** \`admin\`"
-echo ""
+```
+📦 php-inventory-management-system/
+├── php_action/ # PHP logic, queries, and DB connections
+├── includes/ # Header, footer, and reusable UI parts
+├── assets/ # CSS, JS, fonts, and libraries
+├── custom/ # Custom styles and logic
+├── index.php # Login screen
+├── dashboard.php # Admin dashboard
+└── ... # Other modules (product.php, order.php, etc.)
+```
+
+---
+
+## 🛠️ Setup Instructions
+
+Follow these steps to get the project up and running on your local machine.
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone [https://github.com/your-username/php-inventory-management-system.git](https://github.com/your-username/php-inventory-management-system.git)
+```
+
+### 2️⃣ Import the MySQL Database
+
+1.  Open **phpMyAdmin** or use a MySQL command-line interface.
+2.  Create a new database named `store`.
+3.  Import the provided `store.sql` file (located in the root of the cloned repository) into the newly created `store` database.
+
+
+### 4️⃣ Set File Permissions
+
+Ensure your server environment has appropriate file permissions that allow for file uploads and PDF generation, as these features are part of the system.
+
+---
+
+## 🔑 Default Login Credentials
+
+After setup, you can log in with the following default credentials:
+
+* **Username:** `admin`
+* **Password:** `admin`
+
+**⚠️ Please change these default credentials immediately after your first login for security reasons.**
+```
 echo "**⚠️ Please change these default credentials immediately after your first login for security reasons.**"
