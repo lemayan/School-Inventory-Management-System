@@ -1,2 +1,22 @@
-# Full Stack School Inventory Management System
-A robust and scalable inventory management solution tailored for schools. Features include real-time tracking, role-based access control, resource scheduling, and insightful analytics. Built using PHP, MySQL, jQuery, and Bootstrap for reliable performance and ease of use. 🔒📈⚙️
+# Inventory Management System
+
+-Invoice generation and easy to download invoice in PDF format
+
+-Lightweight and easy to use
+
+-Order management and product management can be done with ease
+
+-Report management
+
+-User wise sell report.
+
+# Requirement
+
+```
+Need to change
+store_url in db_connect.php
+
+Login Credentials
+Id : admin
+password : admin
+```
