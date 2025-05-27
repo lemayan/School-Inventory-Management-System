@@ -48,18 +48,9 @@ A powerful, web-based inventory and resource management system built using **Cor
 
 ## 📁 Project Structure
 
-#!/bin/bash
-
-# This script helps set up the PHP Inventory Management System.
-
-echo "---"
-echo "## 📁 Project Structure"
-echo ""
-echo '```'
-echo '📦 php-inventory-management-system/'
-echo '├── php_action/ # PHP logic, queries, and DB connections'
-echo '├── includes/ # Header, footer, and reusable UI parts'
-echo '├── assets/ # CSS, JS, fonts, and libraries'
+├── php_action/ # PHP logic, queries, and DB connections'
+├── includes/ # Header, footer, and reusable UI parts'
+├── assets/ # CSS, JS, fonts, and libraries'
 echo '├── custom/ # Custom styles and logic'
 echo '├── index.php # Login screen'
 echo '├── dashboard.php # Admin dashboard'
