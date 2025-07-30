@@ -26,7 +26,7 @@
 						<tr>
 							<th style="width:10%;">Photo</th>							
 							<th>Product Name</th>
-							<th>Rate</th>							
+							<th>Rate (KSh)</th>							
 							<th>Quantity</th>
 							<th>Brand</th>
 							<th>Category</th>
@@ -88,10 +88,10 @@
 	        </div> <!-- /form-group-->	        	 
 
 	        <div class="form-group">
-	        	<label for="rate" class="col-sm-3 control-label">Rate: </label>
+	        	<label for="rate" class="col-sm-3 control-label">Rate (KSh): </label>
 	        	<label class="col-sm-1 control-label">: </label>
 				    <div class="col-sm-8">
-				      <input type="text" class="form-control" id="rate" placeholder="Rate" name="rate" autocomplete="off">
+				      <input type="text" class="form-control" id="rate" placeholder="Enter price in KSh" name="rate" autocomplete="off">
 				    </div>
 	        </div> <!-- /form-group-->	     	        
 
@@ -246,10 +246,10 @@
 			        </div> <!-- /form-group-->	        	 
 
 			        <div class="form-group">
-			        	<label for="editRate" class="col-sm-3 control-label">Rate: </label>
+			        	<label for="editRate" class="col-sm-3 control-label">Rate (KSh): </label>
 			        	<label class="col-sm-1 control-label">: </label>
 						    <div class="col-sm-8">
-						      <input type="text" class="form-control" id="editRate" placeholder="Rate" name="editRate" autocomplete="off">
+						      <input type="text" class="form-control" id="editRate" placeholder="Enter price in KSh" name="editRate" autocomplete="off">
 						    </div>
 			        </div> <!-- /form-group-->	     	        
 

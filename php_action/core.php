@@ -10,6 +10,10 @@ if(!$_SESSION['userId']) {
 	header('location:'.$store_url);	
 } 
 
-
+// Currency formatting function
+function formatCurrency($amount) {
+	global $currency;
+	return $currency . ' ' . number_format($amount, 2);
+}
 
 ?>

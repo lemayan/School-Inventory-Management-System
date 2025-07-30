@@ -147,7 +147,7 @@ if($_GET['o'] == 'add') {
 
 			  <div class="col-md-6">
 			  	<div class="form-group">
-				    <label for="subTotal" class="col-sm-3 control-label">Sub Amount</label>
+				    <label for="subTotal" class="col-sm-3 control-label">Sub Amount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="subTotal" name="subTotal" disabled="true" />
 				      <input type="hidden" class="form-control" id="subTotalValue" name="subTotalValue" />
@@ -155,27 +155,26 @@ if($_GET['o'] == 'add') {
 				  </div> <!--/form-group-->			  
 				   <!--/form-group-->			  
 				  <div class="form-group">
-				    <label for="totalAmount" class="col-sm-3 control-label">Total Amount</label>
+				    <label for="totalAmount" class="col-sm-3 control-label">Total Amount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="totalAmount" name="totalAmount" disabled="true"/>
 				      <input type="hidden" class="form-control" id="totalAmountValue" name="totalAmountValue" />
 				    </div>
 				  </div> <!--/form-group-->			  
 				  <div class="form-group">
-				    <label for="discount" class="col-sm-3 control-label">Discount</label>
+				    <label for="discount" class="col-sm-3 control-label">Discount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="discount" name="discount" onkeyup="discountFunc()" autocomplete="off" />
 				    </div>
 				  </div> <!--/form-group-->	
 				  <div class="form-group">
-				    <label for="grandTotal" class="col-sm-3 control-label">Grand Total</label>
+				    <label for="grandTotal" class="col-sm-3 control-label">Grand Total (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="grandTotal" name="grandTotal" disabled="true" />
 				      <input type="hidden" class="form-control" id="grandTotalValue" name="grandTotalValue" />
-				    </div>
 				  </div> <!--/form-group-->	
 				  <div class="form-group">
-				    <label for="vat" class="col-sm-3 control-label gst">GST 18%</label>
+				    <label for="vat" class="col-sm-3 control-label gst">VAT 16%</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="vat" name="gstn" readonly="true" />
 				      <input type="hidden" class="form-control" id="vatValue" name="vatValue" />
@@ -185,13 +184,13 @@ if($_GET['o'] == 'add') {
 
 			  <div class="col-md-6">
 			  	<div class="form-group">
-				    <label for="paid" class="col-sm-3 control-label">Paid Amount</label>
+				    <label for="paid" class="col-sm-3 control-label">Paid Amount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="paid" name="paid" autocomplete="off" onkeyup="paidAmount()" />
 				    </div>
 				  </div> <!--/form-group-->			  
 				  <div class="form-group">
-				    <label for="due" class="col-sm-3 control-label">Due Amount</label>
+				    <label for="due" class="col-sm-3 control-label">Due Amount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="due" name="due" disabled="true" />
 				      <input type="hidden" class="form-control" id="dueValue" name="dueValue" />
@@ -224,8 +223,8 @@ if($_GET['o'] == 'add') {
 				    <div class="col-sm-9">
 				      <select class="form-control" name="paymentPlace" id="paymentPlace">
 				      	<option value="">~~SELECT~~</option>
-				      	<option value="1">In Gujarat</option>
-				      	<option value="2">Out Of Gujarat</option>
+				      	<option value="1">Within Kenya</option>
+				      	<option value="2">Outside Kenya</option>
 				      </select>
 				    </div>
 				  </div> <!--/form-group-->							  
@@ -399,7 +398,7 @@ if($_GET['o'] == 'add') {
 
 			  <div class="col-md-6">
 			  	<div class="form-group">
-				    <label for="subTotal" class="col-sm-3 control-label">Sub Amount</label>
+				    <label for="subTotal" class="col-sm-3 control-label">Sub Amount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="subTotal" name="subTotal" disabled="true" value="<?php echo $data[4] ?>" />
 				      <input type="hidden" class="form-control" id="subTotalValue" name="subTotalValue" value="<?php echo $data[4] ?>" />
@@ -407,34 +406,34 @@ if($_GET['o'] == 'add') {
 				  </div> <!--/form-group-->			  
 				  			  
 				  <div class="form-group">
-				    <label for="totalAmount" class="col-sm-3 control-label">Total Amount</label>
+				    <label for="totalAmount" class="col-sm-3 control-label">Total Amount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="totalAmount" name="totalAmount" disabled="true" value="<?php echo $data[6] ?>" />
 				      <input type="hidden" class="form-control" id="totalAmountValue" name="totalAmountValue" value="<?php echo $data[6] ?>"  />
 				    </div>
 				  </div> <!--/form-group-->			  
 				  <div class="form-group">
-				    <label for="discount" class="col-sm-3 control-label">Discount</label>
+				    <label for="discount" class="col-sm-3 control-label">Discount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="discount" name="discount" onkeyup="discountFunc()" autocomplete="off" value="<?php echo $data[7] ?>" />
 				    </div>
 				  </div> <!--/form-group-->	
 				  <div class="form-group">
-				    <label for="grandTotal" class="col-sm-3 control-label">Grand Total</label>
+				    <label for="grandTotal" class="col-sm-3 control-label">Grand Total (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="grandTotal" name="grandTotal" disabled="true" value="<?php echo $data[8] ?>"  />
 				      <input type="hidden" class="form-control" id="grandTotalValue" name="grandTotalValue" value="<?php echo $data[8] ?>"  />
 				    </div>
 				  </div> <!--/form-group-->	
 				  <div class="form-group">
-				    <label for="vat" class="col-sm-3 control-label gst"><?php if($data[13] == 2) {echo "IGST 18%";} else echo "GST 18%"; ?></label>
+				    <label for="vat" class="col-sm-3 control-label gst"><?php if($data[13] == 2) {echo "VAT 16% (Export)";} else echo "VAT 16%"; ?></label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="vat" name="vat" disabled="true" value="<?php echo $data[5] ?>"  />
 				      <input type="hidden" class="form-control" id="vatValue" name="vatValue" value="<?php echo $data[5] ?>"  />
 				    </div>
 				  </div> 
 				  <div class="form-group">
-				    <label for="gstn" class="col-sm-3 control-label gst">G.S.T.IN</label>
+				    <label for="gstn" class="col-sm-3 control-label gst">VAT PIN</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="gstn" name="gstn" value="<?php echo $data[14] ?>"  />
 				    </div>
@@ -443,13 +442,13 @@ if($_GET['o'] == 'add') {
 
 			  <div class="col-md-6">
 			  	<div class="form-group">
-				    <label for="paid" class="col-sm-3 control-label">Paid Amount</label>
+				    <label for="paid" class="col-sm-3 control-label">Paid Amount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="paid" name="paid" autocomplete="off" onkeyup="paidAmount()" value="<?php echo $data[9] ?>"  />
 				    </div>
 				  </div> <!--/form-group-->			  
 				  <div class="form-group">
-				    <label for="due" class="col-sm-3 control-label">Due Amount</label>
+				    <label for="due" class="col-sm-3 control-label">Due Amount (KSh)</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="due" name="due" disabled="true" value="<?php echo $data[10] ?>"  />
 				      <input type="hidden" class="form-control" id="dueValue" name="dueValue" value="<?php echo $data[10] ?>"  />
@@ -496,10 +495,10 @@ if($_GET['o'] == 'add') {
 				      	<option value="">~~SELECT~~</option>
 				      	<option value="1" <?php if($data[13] == 1) {
 				      		echo "selected";
-				      	} ?>  >In Gujarat</option>
+				      	} ?>  >Within Kenya</option>
 				      	<option value="2" <?php if($data[13] == 2) {
 				      		echo "selected";
-				      	} ?> >Out Gujarat</option>
+				      	} ?> >Outside Kenya</option>
 				      </select>
 				    </div>
 				  </div>							  

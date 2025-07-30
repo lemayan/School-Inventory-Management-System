@@ -110,25 +110,25 @@ $orderItemResult = $connect->query($orderItemSql);
                      </td>
                      <td style="width: 50%;text-align: center;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-top-width: thin;border-right-width: thin;border-bottom-width: thin;border-top-color: black;border-right-color: white;border-bottom-color: black;color: white;background-color: black;-webkit-print-color-adjust: exact;">Description Of Goods</td>
                      <td style="width: 150px;text-align: center;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-top-width: thin;border-right-width: thin;border-bottom-width: thin;border-top-color: black;border-right-color: #fff;border-bottom-color: black;background-color: black;color: white;-webkit-print-color-adjust: exact;">Qty.</td>
-                     <td style="width: 150px;text-align: center;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-top-width: thin;border-right-width: thin;border-bottom-width: thin;border-top-color: black;border-right-color: #fff;border-bottom-color: black;background-color: black;color: white;-webkit-print-color-adjust: exact;">Rate&nbsp; Rs.<br>
-                        Ps
+                     <td style="width: 150px;text-align: center;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-top-width: thin;border-right-width: thin;border-bottom-width: thin;border-top-color: black;border-right-color: #fff;border-bottom-color: black;background-color: black;color: white;-webkit-print-color-adjust: exact;">Rate&nbsp; KSh<br>
+                        Cents
                      </td>
-                     <td style="width: 150px;text-align: center;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-top-width: thin;border-right-width: thin;border-bottom-width: thin;border-top-color: black;border-right-color: black;border-bottom-color: black;color: white;background-color: black;-webkit-print-color-adjust: exact;">Amount&nbsp; Rs.<br>
-                        &nbsp;Ps
+                     <td style="width: 150px;text-align: center;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-top-width: thin;border-right-width: thin;border-bottom-width: thin;border-top-color: black;border-right-color: black;border-bottom-color: black;color: white;background-color: black;-webkit-print-color-adjust: exact;">Amount&nbsp; KSh<br>
+                        &nbsp;Cents
                      </td>
                   </tr>';
                   $x = 1;
-                  $cgst = 0;
-                  $igst = 0;
+                  $vat_local = 0;
+                  $vat_export = 0;
                   if($payment_place == 2)
                   {
-                     $igst = $subTotal*18/100;
+                     $vat_export = $subTotal*16/100;
                   }
                   else
                   {
-                     $cgst = $subTotal*9/100;
+                     $vat_local = $subTotal*16/100;
                   }
-                  $total = $subTotal+2*$cgst+$igst;
+                  $total = $subTotal + $vat_local + $vat_export;
             while($row = $orderItemResult->fetch_array()) {       
                         
                $table .= '<tr>
@@ -150,27 +150,24 @@ $orderItemResult = $connect->query($orderItemSql);
                      <td style="width: 218px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-top-color: black; border-right-color: black; border-bottom-color: black;">'.$subTotal.'</td>
                   </tr>
                   <tr>
-                     <td colspan="3" style="border-top: 1px solid black;border-bottom: 1px solid black;border-left: 1px solid black;padding: 5px;">Neft For:- Bank Name</td>
-                     <td rowspan="2" style="border-bottom: 1px solid black;width: 199px;color: white;background-color: black;padding-left: 5px;-webkit-print-color-adjust: exact;">S.G.S.T. 9%</td>
-                     <td rowspan="2" style="border-bottom: 1px solid black;width: 288px;border-right: 1px solid black;">'.$cgst.'</td>
+                     <td colspan="3" style="border-top: 1px solid black;border-bottom: 1px solid black;border-left: 1px solid black;padding: 5px;">Bank Details: KCB Bank</td>
+                     <td rowspan="2" style="border-bottom: 1px solid black;width: 199px;color: white;background-color: black;padding-left: 5px;-webkit-print-color-adjust: exact;"><?php if($payment_place == 2) {echo "VAT 16% (Export)";} else echo "VAT 16%"; ?></td>
+                     <td rowspan="2" style="border-bottom: 1px solid black;width: 288px;border-right: 1px solid black;"><?php if($payment_place == 2) {echo $vat_export;} else echo $vat_local; ?></td>
                   </tr>
                   <tr>
-                     <td colspan="3" style="border-bottom: 1px solid black;width: 859px;border-left: 1px solid black;padding: 5px;">Branch:- branch Address</td>
+                     <td colspan="3" style="border-bottom: 1px solid black;width: 859px;border-left: 1px solid black;padding: 5px;">Branch: Nairobi Branch</td>
                   </tr>
                   <tr>
-                     <td colspan="3" style="border-bottom: 1px solid black;border-left: 1px solid black;padding: 5px;">Bank IFSC CODE:- 78945612301</td>
-                     <td rowspan="2" style="border-bottom: 1px solid black;width: 149px;background-color: black;color: white;padding-left: 5px;-webkit-print-color-adjust: exact;">C.G.S.T. 9%</td>
-                     <td rowspan="2" style="width:218px;border-bottom: 1px solid black;border-right: 1px solid black;">'.$cgst.'
+                     <td colspan="3" style="border-bottom: 1px solid black;border-left: 1px solid black;padding: 5px;">Account Number: 123456789</td>
+                     <td rowspan="2" style="border-bottom: 1px solid black;width: 149px;background-color: black;color: white;padding-left: 5px;-webkit-print-color-adjust: exact;">Total Tax</td>
+                     <td rowspan="2" style="width:218px;border-bottom: 1px solid black;border-right: 1px solid black;"><?php if($payment_place == 2) {echo $vat_export;} else echo $vat_local; ?>
                      </td>
                   </tr>
                   <tr>
-                     <td colspan="3" style="border-bottom: 1px solid black;border-left: 1px solid black;padding: 5px;">AC. HO. Name:- Comapany Name</td>
+                     <td colspan="3" style="border-bottom: 1px solid black;border-left: 1px solid black;padding: 5px;">Company: Your Company Name</td>
                   </tr>
                   <tr>
-                     <td colspan="3" style="border-bottom: 1px solid black;border-left: 1px solid black;padding: 5px;">AC.NO. :- lorem ipsum</td>
-                     <td style="border-bottom: 1px solid black;background-color: black;color: white;padding: 5px;-webkit-print-color-adjust: exact;">I.G.S.T. 18%</td>
-                     <td style="border-bottom: 1px solid black;border-right: 1px solid black;">'.$igst.'</td>
-                  </tr>
+                     <td colspan="3" style="border-bottom: 1px solid black;border-left: 1px solid black;padding: 5px;">VAT PIN: P051234567M</td>
                   <tr>
                      <td colspan="3" style="border-left: 1px solid black;border-bottom: 1px solid black;color: red;padding: 5px;">Amount in words</td>
                      <td style="border-bottom: 1px solid #fff;background-color: black;color: white;padding: 5px;-webkit-print-color-adjust: exact;">G. Total</td>

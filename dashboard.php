@@ -96,14 +96,14 @@ $connect->close();
         <div class="card">
           <div class="cardHeader" style="background-color:#245580;">
             <h1><?php if($totalRevenue) {
-                echo $totalRevenue;
+                echo 'KSh ' . number_format($totalRevenue, 2);
                 } else {
-                    echo '0';
+                    echo 'KSh 0.00';
                     } ?></h1>
           </div>
 
           <div class="cardContainer">
-            <p> INR Total Revenue</p>
+            <p>KSh Total Revenue</p>
           </div>
         </div> 
 
@@ -118,14 +118,14 @@ $connect->close();
                   <thead>
                     <tr>                        
                         <th style="width:40%;">Name</th>
-                        <th style="width:20%;">Orders in Rupees</th>
+                        <th style="width:20%;">Orders in KSh</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php while ($orderResult = $userwiseQuery->fetch_assoc()) { ?>
                         <tr>
                             <td><?php echo $orderResult['username']?></td>
-                            <td><?php echo $orderResult['totalorder']?></td>
+                            <td>KSh <?php echo number_format($orderResult['totalorder'], 2)?></td>
                             
                         </tr>
                         
