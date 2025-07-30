@@ -1,4 +1,4 @@
-# 📦 Full-Stack School Inventory Management System
+# 📦School Inventory Management System
 
 A comprehensive, web-based inventory management solution specifically designed for educational institutions and small organizations. Built with **Core PHP**, **MySQL**, **jQuery**, and **Bootstrap**, this system provides complete control over inventory, orders, user management, and financial reporting - fully localized for **Kenya** with KSh currency and VAT integration.
 
