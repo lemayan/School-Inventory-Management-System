@@ -15,6 +15,7 @@ if($_POST) {
 	$query = $connect->query($sql);
 	$result = $query->fetch_assoc();
 
+
 	if($currentPassword == $result['password']) {
 
 		if($newPassword == $conformPassword) {
